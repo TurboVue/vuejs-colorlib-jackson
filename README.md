@@ -7,7 +7,8 @@
 <h1 align="center">Colorlib Jackson Template Using Vue JS</h1>
 
 <p align="center">
-...
+The goal of this project is rebuild the Colorlib Jackson Template Using Vue JS.
+Jackson is a one page website template with a handy and sticky left sidebar navigation.
 </p>
 
 # Stack
@@ -32,4 +33,8 @@ npm run dev
 ### Compiles and minifies for production
 ```
 npm run build
+
+npm run test
+
+npm test -- --coverage
 ```
