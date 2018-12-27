@@ -58,7 +58,7 @@ describe('Test suite for ServicesComponent', () => {
     });
   });
 
-  it('should have sex cards tag when cards object are passed', () => {
+  it('should have six cards tag when cards object are passed', () => {
     renderer.renderToString(NewComponent, (err, str) => {
       const dom = new jsdom.JSDOM(str);
       const cards = dom.window.document.querySelectorAll('.services');
