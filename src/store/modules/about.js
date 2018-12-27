@@ -11,21 +11,21 @@ const state = {
 }
 
 const mutations = {
-  'SET_STATE_CARDS'(state, cards){
+  'SET_STATE_ABOUT_CARDS'(state, cards){
     state.cards = cards
   }
 }
 
 const actions = {
-  'load-state-menus'(context){
-  const cards = [
+  'load-state-about'(context){
+    const cards = [
       { name: 'Graphic Design', classes: 'icon2', color: 'services color-1', icon: 'icon-bulb' },
       { name: 'Web Design', classes: 'icon2', color: 'services color-2', icon: 'icon-globe-outline' },
       { name: 'Software', classes: 'icon2', color: 'services color-3', icon: 'icon-data' },
       { name: 'Application', classes: 'icon2', color: 'services color-4', icon: 'icon-phone3' }
     ];
 
-    context.commit('SET_STATE_CARDS', cards)
+    context.commit('SET_STATE_ABOUT_CARDS', cards)
   }
 }
 
