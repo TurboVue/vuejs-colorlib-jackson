@@ -14,7 +14,7 @@ describe('Test suite for ServicesComponent', () => {
     }
   };
 
-  const ClonedComponent = Vue.extend(About);
+  const ClonedComponent = Vue.extend(Services);
   const NewComponent = new ClonedComponent({
     computed: {
       services() {
@@ -26,14 +26,14 @@ describe('Test suite for ServicesComponent', () => {
             { cardTitle: 'SOFTWARE', cardColor: 'services color-2', cardIcon: 'icon-data', cardText: 'Separated they live in Bookmarksgrove right at the coast of the Semantics' },
             { cardTitle: 'APPLICATION', cardColor: 'services color-3', cardIcon: 'icon-phone3', cardText: 'Separated they live in Bookmarksgrove right at the coast of the Semantics' },
             { cardTitle: 'GRAPHIC DESIGN', cardColor: 'services color-4', cardIcon: 'icon-layers2', cardText: 'Separated they live in Bookmarksgrove right at the coast of the Semantics' },
-            { cardTitle: 'SOFTWARE', cardColor: 'services color-5', cardIcon: 'icon-dat', cardText: 'Separated they live in Bookmarksgrove right at the coast of the Semantics' },
+            { cardTitle: 'SOFTWARE', cardColor: 'services color-5', cardIcon: 'icon-data', cardText: 'Separated they live in Bookmarksgrove right at the coast of the Semantics' },
             { cardTitle: 'APPLICATION', cardColor: 'services color-6', cardIcon: 'icon-phone3', cardText: 'Separated they live in Bookmarksgrove right at the coast of the Semantics' }
           ],
           counters: [
-            { cardTitle: 'CUPS OF COFFEE', amount: '309' },
-            { cardTitle: 'PROJECTS', amount: '356' },
-            { cardTitle: 'CLIENTS', amount: '30' },
-            { cardTitle: 'PARTNER', amount: '10' }
+            { title: 'CUPS OF COFFEE', amount: '309' },
+            { title: 'PROJECTS', amount: '356' },
+            { title: 'CLIENTS', amount: '30' },
+            { title: 'PARTNER', amount: '10' }
           ]
         }
         return mockObject;
@@ -46,7 +46,7 @@ describe('Test suite for ServicesComponent', () => {
     renderer.renderToString(NewComponent, (err, str) => {
       const dom = new jsdom.JSDOM(str);
       const headingSpan = dom.window.document.querySelector('span');
-      expect(headingSpan.textContent).toContain('What I do?');
+      expect(headingSpan.textContent).toContain('WHAT I DO?');
     });
   });
 
@@ -54,7 +54,7 @@ describe('Test suite for ServicesComponent', () => {
     renderer.renderToString(NewComponent, (err, str) => {
       const dom = new jsdom.JSDOM(str);
       const headingH2 = dom.window.document.querySelector('h2');
-      expect(headingH2.textContent).toContain('Here are some of my expertise');
+      expect(headingH2.textContent).toContain('HERE ARE SOME OF MY EXPERTISE');
     });
   });
 
@@ -62,15 +62,15 @@ describe('Test suite for ServicesComponent', () => {
     renderer.renderToString(NewComponent, (err, str) => {
       const dom = new jsdom.JSDOM(str);
       const cards = dom.window.document.querySelectorAll('.services');
-      expect(cards.length).toBe(4);
+      expect(cards.length).toBe(6);
     });
   });
 
   it('should have an component when counts object is passed', () => {
     renderer.renderToString(NewComponent, (err, str) => {
       const dom = new jsdom.JSDOM(str);
-      const hiremeCard = dom.window.document.querySelectorAll('.colorlib-counters');
-      expect(hiremeCard.length).toBe(1);
+      const colorlibCounter = dom.window.document.querySelectorAll('.colorlib-counters');
+      expect(colorlibCounter.length).toBe(1);
     });
   });
 
