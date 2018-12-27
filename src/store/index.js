@@ -6,6 +6,7 @@ import app from './modules/app'
 import sidebar from './modules/sidebar'
 import home from './modules/home'
 import about from './modules/about'
+import services from './modules/services'
 
 Vue.use(Vuex)
 Vue.use(VueResource)
@@ -16,7 +17,8 @@ export default new Vuex.Store({
     app,
     sidebar,
     home,
-    about
+    about,
+    services
   },
   // mutations,
   // actions
