@@ -23,6 +23,7 @@ export default {
     store.dispatch('load-state-menus')
     store.dispatch('load-state-slides')
     store.dispatch('load-state-about')
+    store.dispatch('load-state-services')
   },
 }
 </script>
