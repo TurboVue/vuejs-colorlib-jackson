@@ -4,8 +4,8 @@ Vue.use(VueResource)
 
 // Initial state
 const state = {
-  title: 'About Us',
-  caption: 'Who Am I?',
+  title: 'WHAT I DO?',
+  caption: 'HERE ARE SOME OF MY EXPERTISE',
   cards: [],
   counters: [
     { title: 'CUPS OF COFFEE', amount: '309' },
