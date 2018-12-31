@@ -43,7 +43,7 @@ import store from '../store'
 import { contentWayPoint } from './utils'
 
 export default {
-  name: 'Services',
+  name: 'Education',
   data(){
     return {
       elementIndex: 0

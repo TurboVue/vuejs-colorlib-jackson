@@ -33,7 +33,7 @@ import store from '../store'
 import { contentWayPoint } from './utils'
 
 export default {
-  name: 'Services',
+  name: 'Skills',
   mounted(){
     contentWayPoint()
   },
