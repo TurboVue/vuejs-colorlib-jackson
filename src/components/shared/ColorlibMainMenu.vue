@@ -22,7 +22,7 @@ export default {
   },
   props: {
     menus: {
-      type: Object,
+      type: Array,
       default: {}
     }
   },
