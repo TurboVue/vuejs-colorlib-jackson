@@ -8,6 +8,7 @@ import home from './modules/home'
 import about from './modules/about'
 import services from './modules/services'
 import skills from './modules/skills'
+import education from './modules/education'
 
 Vue.use(Vuex)
 Vue.use(VueResource)
@@ -20,7 +21,8 @@ export default new Vuex.Store({
     home,
     about,
     services,
-    skills
+    skills,
+    education
   },
   // mutations,
   // actions
