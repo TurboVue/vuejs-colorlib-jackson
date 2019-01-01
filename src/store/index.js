@@ -10,6 +10,7 @@ import services from './modules/services'
 import skills from './modules/skills'
 import education from './modules/education'
 import experience from './modules/experience'
+import blog from './modules/blog'
 
 Vue.use(Vuex)
 Vue.use(VueResource)
@@ -24,7 +25,8 @@ export default new Vuex.Store({
     services,
     skills,
     education,
-    experience
+    experience,
+    blog
   },
   // mutations,
   // actions
