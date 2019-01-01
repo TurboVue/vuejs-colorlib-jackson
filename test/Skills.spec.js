@@ -58,7 +58,7 @@ describe('Test suite for SkillsComponent', () => {
     renderer.renderToString(NewComponent, (err, str) => {
       const dom = new jsdom.JSDOM(str);
       const ability = dom.window.document.querySelectorAll('.progress');
-      expect(ability.length).toBe();
+      expect(ability.length).toBe(6);
     });
   });
 
