@@ -4,6 +4,8 @@ import Services from '@/components/Services'
 import Skills from '@/components/Skills'
 import Education from '@/components/Education'
 import Experience from '@/components/Experience'
+import Blog from '@/components/Blog'
+import Contact from '@/components/Contact'
 
 export const routes = [
   {
@@ -36,5 +38,15 @@ export const routes = [
     path: '/experience',
     name: 'Experience',
     component: Experience
+  },
+  {
+    path: '/blog',
+    name: 'Blog',
+    component: Blog
+  },
+  {
+    path: '/contact',
+    name: 'Contact',
+    component: Contact
   }
 ]
