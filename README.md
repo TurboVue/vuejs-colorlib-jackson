@@ -12,15 +12,6 @@ The goal of this project is rebuild the Colorlib Jackson Template Using Vue JS.
 Jackson is a one page website template with a handy and sticky left sidebar navigation.
 </p>
 
-# Stack
-
-- **Vue CLI 3**
-- **Vuetify**
-- **VueRouter**
-- **Vuex**
-- **Axios**
-- **Webpack**
-
 ## Project setup
 ```
 npm install
