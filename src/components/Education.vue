@@ -40,17 +40,15 @@
 
 <script>
 import store from '../store'
-import { contentWayPoint } from './utils'
+import defaultMixin from './mixins/defaultMixin.js'
 
 export default {
   name: 'Education',
+  mixins: [defaultMixin],
   data(){
     return {
       elementIndex: 0
     }
-  },
-  mounted(){
-    contentWayPoint()
   },
   computed: {
     content(){

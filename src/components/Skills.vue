@@ -30,13 +30,11 @@
 
 <script>
 import store from '../store'
-import { contentWayPoint } from './utils'
+import defaultMixin from './mixins/defaultMixin.js'
 
 export default {
   name: 'Skills',
-  mounted(){
-    contentWayPoint()
-  },
+  mixins: [defaultMixin],
   computed: {
     content(){
       return store.state.skills.content
