@@ -47,13 +47,11 @@
 
 <script>
 import store from '../store'
-import { contentWayPoint } from './utils'
+import defaultMixin from './mixins/defaultMixin.js'
 
 export default {
   name: 'Services',
-  mounted(){
-    contentWayPoint()
-  },
+  mixins: [defaultMixin],
   computed: {
     services() { return store.state.services }
   }
