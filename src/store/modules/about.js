@@ -4,15 +4,17 @@ Vue.use(VueResource)
 
 // Initial state
 const state = {
-  header: 'About Us',
-  title: 'Who Am I?',
-  cards: [],
-  hireme: '<h2>I am happy to know you <br>that 300+ projects done sucessfully!</h2><a href="#" class="btn-hire">Hire me</a>'
+  content: {
+    title: 'ABOUT US',
+    caption: 'WHO AM I?',
+    cards: [],
+    hireme: '<h2>I am happy to know you <br>that 300+ projects done sucessfully!</h2><a href="#" class="btn-hire">Hire me</a>'
+  }
 }
 
 const mutations = {
   'SET_STATE_ABOUT_CARDS'(state, cards){
-    state.cards = cards
+    state.content.cards = cards
   }
 }
 
