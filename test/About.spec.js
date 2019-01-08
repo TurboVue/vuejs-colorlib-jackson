@@ -17,10 +17,10 @@ describe('Test suite for AboutComponent', () => {
   const ClonedComponent = Vue.extend(About);
   const NewComponent = new ClonedComponent({
     computed: {
-      about() {
-        let objMock = {
-          header: 'About Us',
-          title: 'Who Am I?',
+      content() {
+        let content = {
+          title: 'ABOUT US',
+          caption: 'WHO AM I?',
           cards: [
             { name: 'Graphic Design', classes: 'icon2', color: 'services color-1', icon: 'icon-bulb' },
             { name: 'Web Design', classes: 'icon2', color: 'services color-2', icon: 'icon-globe-outline' },
@@ -29,7 +29,7 @@ describe('Test suite for AboutComponent', () => {
           ],
           hireme: '<h2>I am happy to know you <br>that 300+ projects done sucessfully!</h2><a href="#" class="btn-hire">Hire me</a>'
         }
-        return objMock;
+        return content;
       }
     }
   }).$mount();
@@ -38,16 +38,16 @@ describe('Test suite for AboutComponent', () => {
   it('should have an <span> tag when header is passed', () => {
     renderer.renderToString(NewComponent, (err, str) => {
       const dom = new jsdom.JSDOM(str);
-      const headingSpan = dom.window.document.querySelector('span');
-      expect(headingSpan.textContent).toContain('About Us');
+      const title = dom.window.document.querySelector('span');
+      expect(title.textContent).toContain('ABOUT US');
     });
   });
 
   it('should have an <h2> tag when title is passed', () => {
     renderer.renderToString(NewComponent, (err, str) => {
       const dom = new jsdom.JSDOM(str);
-      const headingH2 = dom.window.document.querySelector('h2');
-      expect(headingH2.textContent).toContain('Who Am I?');
+      const caption = dom.window.document.querySelector('h2');
+      expect(caption.textContent).toContain('WHO AM I?');
     });
   });
 
