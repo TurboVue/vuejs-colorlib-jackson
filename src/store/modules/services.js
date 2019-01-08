@@ -4,20 +4,22 @@ Vue.use(VueResource)
 
 // Initial state
 const state = {
-  title: 'WHAT I DO?',
-  caption: 'HERE ARE SOME OF MY EXPERTISE',
-  cards: [],
-  counters: [
-    { title: 'CUPS OF COFFEE', amount: '309' },
-    { title: 'PROJECTS', amount: '356' },
-    { title: 'CLIENTS', amount: '30' },
-    { title: 'PARTNER', amount: '10' }
-  ]
+  content: {
+    title: 'WHAT I DO?',
+    caption: 'HERE ARE SOME OF MY EXPERTISE',
+    cards: [],
+    counters: [
+      { title: 'CUPS OF COFFEE', amount: '309' },
+      { title: 'PROJECTS', amount: '356' },
+      { title: 'CLIENTS', amount: '30' },
+      { title: 'PARTNER', amount: '10' }
+    ]
+  }
 }
 
 const mutations = {
   'SET_STATE_SERVICES_CARDS'(state, cards){
-    state.cards = cards
+    state.content.cards = cards
   }
 }
 

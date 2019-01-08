@@ -17,8 +17,8 @@ describe('Test suite for ServicesComponent', () => {
   const ClonedComponent = Vue.extend(Services);
   const NewComponent = new ClonedComponent({
     computed: {
-      services() {
-        let mockObject = {
+      content() {
+        let content = {
           title: 'WHAT I DO?',
           caption: 'HERE ARE SOME OF MY EXPERTISE',
           cards: [
@@ -36,7 +36,7 @@ describe('Test suite for ServicesComponent', () => {
             { title: 'PARTNER', amount: '10' }
           ]
         }
-        return mockObject;
+        return content;
       }
     }
   }).$mount();
@@ -45,24 +45,24 @@ describe('Test suite for ServicesComponent', () => {
   it('should have an <span> tag when title is passed', () => {
     renderer.renderToString(NewComponent, (err, str) => {
       const dom = new jsdom.JSDOM(str);
-      const headingSpan = dom.window.document.querySelector('span');
-      expect(headingSpan.textContent).toContain('WHAT I DO?');
+      const title = dom.window.document.querySelector('span');
+      expect(title.textContent).toContain('WHAT I DO?');
     });
   });
 
   it('should have an <h2> tag when caption is passed', () => {
     renderer.renderToString(NewComponent, (err, str) => {
       const dom = new jsdom.JSDOM(str);
-      const headingH2 = dom.window.document.querySelector('h2');
-      expect(headingH2.textContent).toContain('HERE ARE SOME OF MY EXPERTISE');
+      const caption = dom.window.document.querySelector('h2');
+      expect(caption.textContent).toContain('HERE ARE SOME OF MY EXPERTISE');
     });
   });
 
   it('should have six cards tag when cards object are passed', () => {
     renderer.renderToString(NewComponent, (err, str) => {
       const dom = new jsdom.JSDOM(str);
-      const cards = dom.window.document.querySelectorAll('.services');
-      expect(cards.length).toBe(6);
+      const expertiseCards = dom.window.document.querySelectorAll('.services');
+      expect(expertiseCards.length).toBe(6);
     });
   });
 
