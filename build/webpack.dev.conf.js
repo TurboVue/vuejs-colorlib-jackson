@@ -7,6 +7,7 @@ const path = require('path')
 const baseWebpackConfig = require('./webpack.base.conf')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')
 
@@ -56,6 +57,15 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       filename: 'index.html',
       template: 'index.html',
       inject: true
+    }),
+    // extract css into its own file
+    new ExtractTextPlugin({
+      filename: utils.assetsPath('css/[name].[contenthash].css'),
+      // Setting the following option to `false` will not extract CSS from codesplit chunks.
+      // Their CSS will instead be inserted dynamically with style-loader when the codesplit chunk has been loaded by webpack.
+      // It's currently set to `true` because we are seeing that sourcemaps are included in the codesplit bundle as well when it's `false`,
+      // increasing file size: https://github.com/vuejs-templates/webpack/issues/1110
+      allChunks: true,
     }),
     // copy custom static assets
     new CopyWebpackPlugin([
