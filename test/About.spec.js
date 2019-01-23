@@ -21,6 +21,7 @@ describe('Test suite for AboutComponent', () => {
         let content = {
           title: 'ABOUT US',
           caption: 'WHO AM I?',
+          description: '',
           cards: [
             { name: 'Graphic Design', classes: 'icon2', color: 'services color-1', icon: 'icon-bulb' },
             { name: 'Web Design', classes: 'icon2', color: 'services color-2', icon: 'icon-globe-outline' },
